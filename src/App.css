@@ -7,32 +7,1079 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  width: 400px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer-logo {
+  width: 300px;
+  padding: 2rem;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.page-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #e4c988;
+  padding: 10px;
+  font-family: "'Saira Condensed', sans-serif";
+  font-size: 30px;
+}
+
+.nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #e4c988;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}
+
+.review-link {
+  background-color: #f5f5f5 !important;
+  border: none !important;
+  color: black !important;
+  box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.3);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* This is the semi-transparent black overlay */
+}
+
+.video {
+  width: 100%;
+  height: auto;
+}
+
+.landing-title {
+  margin-top: 10%;
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 160px;
+  text-align: center;
   color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.landing-title-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 13%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.landing-paragraph {
+  margin-top: 10px;
+  margin-left: 13% !important;
+  /* font-weight: bold; */
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.landing-h3 {
+  color: white;
+  border-bottom: white solid 2px;
+  padding-bottom: 10px;
+  font-family: "Saira Condensed", sans-serif;
+  margin-top: 10rem;
+  margin-left: 8rem;
+}
+
+.landing-threeD {
+  height: 1100px;
+  width: 100%;
+}
+
+.landing-container {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video {
+  width: 1966px;
+  height: 1106px;
+  visibility: visible;
+}
+
+/* MEET US SECTION */
+
+.white-granite {
+  height: 100%;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+
+.area {
+  box-shadow: 1rem 1rem #2b2730, -1rem -1rem #e4c988;
+}
+
+.f-agent__content h5 {
+  padding: 20px;
+  font-size: 30px;
+}
+
+.f-agent__content h2 {
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
+  width: 70%;
+  padding: 15px;
+  margin: auto auto;
+  font-size: 50px;
+}
+
+.f-agent__content p {
+  font-family: "Comme", sans-serif;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  font-size: 30px;
+}
+
+.meet-us-button {
+  background-color: transparent !important;
+  border: solid black 1px !important;
+  border-radius: 0 !important;
+  font-family: "Poiret One", cursive !important;
+  color: black !important; /* default text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* to make the transition smoother */
+  font-size: 20px !important;
+}
+
+.meet-us-button:hover,
+.meet-us-button:hover .link {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* TESTIMONIALS SECTION */
+
+.testimonial-cols {
+  background-color: #f5f5f5;
+}
+
+.animated-underline {
+  position: relative;
+  display: inline-block;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 120px;
+  font-weight: bold;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  padding-left: 10rem;
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+
+.animated-underline:not(.line-animation)::after {
+  transition: width 1s ease; /* The transition duration when the animation is out of view */
+  width: 0;
+}
+
+.line-animation::after {
+  transition: width 1s ease;
+  width: 100%;
+}
+
+/* CONTACT SECTION */
+.contact-form {
+  text-align: center;
+  margin: auto auto;
+  display: inline-block;
+}
+
+.contact-form p {
+  color: gray;
+  padding-top: 5rem;
+  font-size: 15px;
+}
+
+.contact-form button {
+  margin-left: 70%;
+  background-color: transparent;
+  border: solid black 1px !important;
+  border-radius: 0;
+  font-family: "Poiret One", cursive !important;
+  color: black;
+  padding: 7px 15px;
+  font-size: 20px;
+}
+
+.contact-title {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 85px;
+  font-weight: bold;
+  font-family: "Saira Condensed", sans-serif;
+  color: black !important;
+  display: inline-block;
+}
+
+.contact-underline {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-right: 10rem;
+  font-size: 120px;
+  font-weight: bold;
+  font-family: "Saira Condensed", sans-serif;
+  color: black !important;
+  display: inline-block;
+}
+
+.contact-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+
+.contact-underline:not(.line-animation)::after {
+  transition: width 1s ease; /* The transition duration when the animation is out of view */
+  width: 0;
+}
+
+.line-animation::after {
+  transition: width 1s ease;
+  width: 50% !important;
+}
+
+.contact-input {
+  display: block;
+  width: 50rem !important;
+  height: 4rem;
+  font-weight: bold;
+  font-family: "Poiret One", cursive;
+  margin: 60px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px black;
+  color: black !important;
+  outline: none;
+}
+/* 
+.contact-textarea {
+  display: block;
+  width: 40rem;
+  height: 7rem;
+  font-weight: bold;
+  font-family: "Poiret One", cursive;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px gray;
+  color: gray;
+  outline: none;
+} */
+
+.contact-form__field-input {
+  display: block;
+  width: 50rem !important;
+  height: 5rem;
+  font-weight: bold;
+  font-family: "Poiret One", cursive;
+  margin: 60px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 1px black;
+  color: black;
+  outline: none;
+}
+
+.contact-message {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 20px;
+  margin: 0;
+  color: black !important;
+  padding: 0 !important;
+}
+
+.contact-input::placeholder {
+  transition: all 0.5s ease;
+}
+
+.contact-input:hover::placeholder {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.contact-form__field-input::placeholder {
+  transition: all 0.5s ease;
+}
+
+.contact-form__field-input:hover::placeholder {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+/* ContactComp.css */
+
+.contactus-submitbtn {
+  transition: opacity 0.5s, transform 0.4s;
+}
+
+.contactus-submitbtn:hover {
+  /* Ensure no hover styles are applied */
+  background-color: black !important;
+  color: white !important;
+}
+
+.contactus-submitbtn.success {
+  animation: fadeOutToRight 0.5s forwards, fadeInFromRight 0.5s 0.2s forwards;
+}
+
+@keyframes fadeOutToRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-4px, 4px);
+  }
+  40% {
+    transform: translate(-4px, -4px);
+  }
+  60% {
+    transform: translate(4px, 4px);
+  }
+  80% {
+    transform: translate(4px, -4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+.vibrate {
+  animation: vibrate 0.1s linear infinite;
+}
+
+/* MACBOOK LAYOUT */
+@media (max-width: 1280px) {
+  .navbar-toggler {
+    border: none !important;
+  }
+
+  .nav-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #e4c988;
+    padding: 10px;
+    font-family: "'Saira Condensed', sans-serif";
+    font-size: 30px;
+  }
+
+  .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #e4c988;
+    transition: width 0.3s;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+  }
+
+  .review-link {
+    background-color: #f5f5f5 !important;
+    border: none !important;
+    color: black !important;
+    box-shadow: 0px 2px 5px rgb(0, 0, 0, 0.3);
+  }
+
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(
+      0,
+      0,
+      0,
+      0.4
+    ); /* This is the semi-transparent black overlay */
+  }
+
+  .video {
+    width: 100%;
+    height: auto;
+  }
+
+  .landing-title {
+    margin-top: 20%;
+    /* margin-left: 13%; */
+    /* font-family: "'Saira Condensed', sans-serif" !important; */
+    font-weight: bold;
+    font-size: 120px;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+
+  .landing-paragraph {
+    margin-top: 10px;
+    margin-left: 13% !important;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+
+  .landing-threeD {
+    height: 1100px;
+    width: 100%;
+  }
+
+  .landing-container {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video {
+    width: 1966px;
+    height: 1106px;
+    visibility: visible;
+  }
+
+  /* MEET US SECTION */
+
+  .area {
+    box-shadow: 1rem 1rem #2b2730, -1rem -1rem #e4c988;
+  }
+
+  .f-agent__content h5 {
+    padding: 20px;
+  }
+
+  .f-agent__content h2 {
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+    width: 50%;
+    padding: 15px;
+    margin: auto auto;
+  }
+
+  .f-agent__content p {
+    font-family: "Comme", sans-serif;
+    padding-top: 10%;
+    font-size: 30px;
+  }
+
+  .meet-us-button {
+    background-color: transparent !important;
+    border: solid black 1px !important;
+    border-radius: 0 !important;
+    font-family: "Poiret One", cursive !important;
+    color: black !important; /* default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* to make the transition smoother */
+  }
+
+  .meet-us-button:hover,
+  .meet-us-button:hover .link {
+    background-color: black !important;
+    color: white !important;
+  }
+
+  /* TESTIMONIALS SECTION */
+
+  .testimonial-cols {
+    background-color: #f5f5f5;
+  }
+
+  .animated-underline {
+    position: relative;
+    display: inline-block;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 120px;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    padding-left: 10rem;
+  }
+
+  .animated-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease;
+  }
+
+  .animated-underline:not(.line-animation)::after {
+    transition: width 1s ease; /* The transition duration when the animation is out of view */
+    width: 0;
+  }
+
+  .line-animation::after {
+    transition: width 1s ease;
+    width: 100%;
+  }
+
+  /* CONTACT SECTION */
+  .contact-form {
+    text-align: center;
+    margin: auto auto;
+    display: inline-block;
+  }
+
+  .contact-form p {
+    color: gray;
+    padding-top: 5rem;
+  }
+
+  .contact-form button {
+    margin-left: 70%;
+    background-color: transparent;
+    border: solid gray 1px !important;
+    border-radius: 0;
+    font-family: "Saira Condensed", sans-serif;
+    color: gray;
+    padding: 7px 15px;
+    font-weight: bold;
+  }
+
+  .contact-title {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 85px;
+    font-weight: bold;
+    font-family: "Saira Condensed", sans-serif;
+    color: black !important;
+    display: inline-block;
+  }
+
+  .contact-underline {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-right: 10rem;
+    font-size: 120px;
+    font-weight: bold;
+    font-family: "Saira Condensed", sans-serif;
+    color: black !important;
+    display: inline-block;
+  }
+
+  .contact-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease;
+  }
+
+  .contact-underline:not(.line-animation)::after {
+    transition: width 1s ease; /* The transition duration when the animation is out of view */
+    width: 0;
+  }
+
+  .line-animation::after {
+    transition: width 1s ease;
+    width: 50% !important;
+  }
+
+  .contact-input {
+    display: block;
+    width: 45rem !important;
+    height: 3rem;
+    font-weight: bold;
+    font-family: "Poiret One", cursive;
+    margin: 60px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px gray;
+    color: black !important;
+    outline: none;
+  }
+
+  .contact-textarea {
+    display: block;
+    width: 40rem;
+    height: 7rem;
+    font-weight: bold;
+    font-family: "Poiret One", cursive;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px gray;
+    color: gray;
+    outline: none;
+  }
+
+  .contact-form__field-input {
+    display: block;
+    width: 45rem !important;
+    height: 3rem;
+    font-weight: bold;
+    font-family: "Poiret One", cursive;
+    margin: 60px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px gray;
+    color: black;
+    outline: none;
+  }
+
+  .contact-message {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 20px;
+    margin: 0;
+    color: black !important;
+  }
+
+  .contact-input::placeholder {
+    transition: all 0.5s ease;
+  }
+
+  .contact-input:hover::placeholder {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  .contact-form__field-input::placeholder {
+    transition: all 0.5s ease;
+  }
+
+  .contact-form__field-input:hover::placeholder {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  /* ContactComp.css */
+
+  .contactus-submitbtn {
+    transition: opacity 0.5s, transform 0.4s;
+  }
+
+  .contactus-submitbtn:hover {
+    /* Ensure no hover styles are applied */
+    background-color: black !important;
+    color: white !important;
+  }
+
+  .contactus-submitbtn.success {
+    animation: fadeOutToRight 0.5s forwards, fadeInFromRight 0.5s 0.2s forwards;
+  }
+
+  @keyframes fadeOutToRight {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+  }
+
+  @keyframes fadeInFromRight {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes vibrate {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-4px, 4px);
+    }
+    40% {
+      transform: translate(-4px, -4px);
+    }
+    60% {
+      transform: translate(4px, 4px);
+    }
+    80% {
+      transform: translate(4px, -4px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  .vibrate {
+    animation: vibrate 0.1s linear infinite;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    width: 250px !important;
+  }
+
+  .footer-logo {
+    width: 250px;
+    padding: 2rem;
+  }
+
+  .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #e4c988;
+    transition: width 0.3s;
+  }
+
+  .nav-link:hover::after {
+    width: 60%;
+    transition: width 0.3s;
+  }
+
+  .landing-title {
+    text-align: center;
+    margin-top: 10%;
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    margin-left: none !important;
+
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+  }
+
+  .landing-title-content {
+    display: flex;
+    justify-content: center !important;
+    flex-wrap: nowrap;
+    /* margin-left: 13%; */
+    margin-left: 10% !important;
+    width: 100%;
+  }
+
+  .landing-paragraph {
+    text-align: center;
+    margin-top: 10px;
+    font-family: "'Saira Condensed', sans-serif" !important;
+    font-weight: bold;
+    font-size: 13px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .landing-h3 {
+    color: white;
+    border-bottom: white solid 2px;
+    padding-bottom: 10px;
+    font-family: "Saira Condensed", sans-serif;
+    margin-top: 5rem;
+    margin-left: 3rem;
+  }
+
+  .landing-threeD {
+    height: 500px;
+    width: 100%;
+    padding-top: 3px;
+  }
+
+  .landing-container {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .f-agent__content h5 {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .f-agent__content h2 {
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+    width: 70%;
+    padding: 15px;
+    margin: auto auto;
+    font-size: 30px;
+  }
+
+  .f-agent__content p {
+    font-family: "Comme", sans-serif;
+    padding-top: 25%;
+    font-size: 20px;
+  }
+
+  .video-content h1 {
+    font-size: 45px !important;
+    font-family: "Comme", sans-serif;
+  }
+
+  .video-content p {
+    font-size: 12px !important;
+  }
+
+  /* .spline {
+    height: 200px !important;
+  } */
+
+  .white-granite {
+    height: 100%;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+  }
+
+  .meet-us-button {
+    background-color: transparent !important;
+    border: solid black 1px !important;
+    border-radius: 0 !important;
+    font-family: "Poiret One", cursive !important;
+    color: black !important; /* default text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* to make the transition smoother */
+  }
+
+  .meet-us-button:hover,
+  .meet-us-button:hover .link {
+    background-color: black !important;
+    color: white !important;
+  }
+
+  /* .testimonial-cols img {
+    max-width: 100%;
+    height: auto;
+  } */
+
+  .animated-underline {
+    position: relative;
+    display: inline-block;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 0px;
+  }
+
+  .animated-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease;
+  }
+
+  .animated-underline:not(.line-animation)::after {
+    transition: width 1s ease; /* The transition duration when the animation is out of view */
+    width: 0;
+  }
+
+  .line-animation::after {
+    transition: width 1s ease;
+    width: 50% !important;
+  }
+
+  /* CONTACT */
+
+  .contact-form p {
+    color: gray;
+  }
+
+  .contact-form button {
+    margin-left: 70%;
+    background-color: transparent;
+    border: solid black 1px !important;
+    font-family: "Poiret One", cursive;
+    color: black;
+    padding: 7px 15px;
+    font-weight: normal;
+  }
+
+  .contact-title {
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 75px;
+    font-weight: bold;
+    font-family: "Saira Condensed", sans-serif;
+    color: gray;
+    display: inline-block;
+  }
+
+  .contact-input {
+    display: block;
+    width: 20rem !important;
+    height: 3rem;
+    font-weight: bold;
+    font-family: "Poiret One", cursive;
+    margin: 60px 0;
+    background-color: transparent;
+    /* border: none; */
+    border-bottom: solid 1px black;
+    color: gray;
+    outline: none;
+    border-radius: 0;
+  }
+
+  .contact-form__field-input {
+    display: block;
+    width: 20rem !important;
+    height: 3rem;
+    font-weight: bold;
+    font-family: "Poiret One", cursive;
+    margin: 60px 0;
+    background-color: transparent;
+    /* border: none; */
+    border-bottom: solid 1px black;
+    color: gray;
+    outline: none;
+    border-radius: 0;
+  }
+
+  .contact-pic {
+    width: 600px !important;
+    height: 400px !important;
+    left: 70% !important;
+  }
+
+  .contact-message {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 15px;
+    padding-top: 20px;
+  }
+
+  .contact-underline {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-right: 10rem;
+    font-size: 85px;
+    font-weight: bold;
+    font-family: "Saira Condensed", sans-serif;
+    color: black !important;
+    display: inline-block;
+  }
+
+  .contact-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease;
+  }
+
+  .contact-underline:not(.line-animation)::after {
+    transition: width 1s ease; /* The transition duration when the animation is out of view */
+    width: 0;
+  }
+
+  .line-animation::after {
+    transition: width 1s ease;
+    width: 50% !important;
   }
 }

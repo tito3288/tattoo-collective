@@ -1,0 +1,201 @@
+.mortgage-input {
+  display: block;
+  border: solid #e4c988 3px !important;
+  height: 3rem;
+  width: 30rem;
+  padding-left: 20px !important;
+  outline: none;
+  box-shadow: 0.5rem 0.5rem black;
+  font-family: "'Saira Condensed', sans-serif";
+  border-radius: 0;
+}
+
+.mortgage-button {
+  display: block;
+  border: solid #e4c988 3px !important;
+  height: 3rem;
+  width: 8rem;
+  padding-left: 20px !important;
+  outline: none;
+  box-shadow: 0.5rem 0.5rem black;
+  font-family: "'Saira Condensed', sans-serif";
+  border-radius: 0;
+  background-color: white;
+}
+
+.mortgage-button:focus,
+.mortgage-button:active,
+.mortgage-button.focus,
+.mortgage-button:active:focus {
+  box-shadow: 0.5rem 0.5rem black;
+
+  color: black;
+  background-color: white;
+  border-color: #e4c988;
+  box-shadow: none; /* remove box-shadow if it's part of Bootstrap's focus styles */
+}
+
+.mortgage-underline {
+  position: relative;
+  display: inline-block;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 120px;
+  font-weight: bold;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  padding-right: 15rem;
+}
+
+.mortgage-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+
+.mortgage-underline:not(.line-animation)::after {
+  transition: width 1s ease; /* The transition duration when the animation is out of view */
+  width: 0;
+}
+
+.line-animation::after {
+  transition: width 1s ease;
+  width: 100%;
+}
+
+.mortgage-interest {
+  display: block;
+  border: solid #e4c988 3px !important;
+  height: 3rem;
+  width: 30rem;
+  padding-left: 25px !important;
+  outline: none;
+  box-shadow: 0.5rem 0.5rem black;
+  font-family: "'Saira Condensed', sans-serif";
+}
+
+.inputWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.dollarSign {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.currencyinput {
+  border: 1px inset #ccc;
+}
+.currencyinput input {
+  border: 0;
+}
+
+/* , -1rem -1rem #e4c988 */
+
+.mortgage-doughnut {
+  width: 600px;
+  height: 100%;
+  margin: auto auto;
+  text-align: center;
+  background-color: white;
+}
+
+.form h6 {
+  font-family: "'Saira Condensed', sans-serif";
+  font-size: 25px;
+}
+
+/* MACBOOK DISPLAY */
+@media screen and (min-width: 1280px) and (min-height: 800px) and (-webkit-min-device-pixel-ratio: 2) and (max-resolution: 227dpi) {
+  .mortgage-input {
+    display: block;
+    border: solid #e4c988 3px !important;
+    height: 3rem;
+    width: 30rem;
+    padding-left: 20px !important;
+    outline: none;
+    box-shadow: 0.5rem 0.5rem black;
+    font-family: "'Saira Condensed', sans-serif";
+  }
+
+  .mortgage-doughnut {
+    width: 600px;
+    height: 100%;
+    margin: auto auto;
+    text-align: center;
+    background-color: white;
+  }
+}
+
+/* PHONE DISPLAY */
+@media screen and (max-width: 600px) {
+  .mortgage-input {
+    display: block;
+    border: solid #e4c988 3px !important;
+    height: 3rem;
+    width: 20rem;
+    padding-left: 20px !important;
+    outline: none;
+    box-shadow: 0.5rem 0.5rem black;
+    font-family: "'Saira Condensed', sans-serif";
+    border-radius: 0;
+  }
+
+  .mortgage-underline {
+    position: relative;
+    display: inline-block;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 75px;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    padding-right: 5rem;
+  }
+
+  .mortgage-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease;
+  }
+
+  .mortgage-underline:not(.line-animation)::after {
+    transition: width 1s ease; /* The transition duration when the animation is out of view */
+    width: 0;
+  }
+
+  .line-animation::after {
+    transition: width 1s ease;
+    width: 80% !important;
+  }
+
+  .mortgage-interest {
+    display: block;
+    border: solid #e4c988 3px !important;
+    height: 3rem;
+    width: 20rem;
+    padding-left: 25px !important;
+    outline: none;
+    box-shadow: 0.5rem 0.5rem black;
+    font-family: "'Saira Condensed', sans-serif";
+  }
+
+  .mortgage-doughnut {
+    width: 350px;
+    height: 100%;
+    margin: auto auto;
+    text-align: center;
+    background-color: white;
+  }
+}

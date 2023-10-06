@@ -1,0 +1,342 @@
+.our-regions {
+  position: absolute;
+  bottom: -20rem;
+  width: 100%;
+  padding: 20px;
+}
+
+.things-to-do {
+  font-size: 90px;
+}
+
+.our-regions-coverphoto {
+  height: 600px !important;
+}
+
+.our-regions-content img {
+  max-width: 100%;
+  height: auto;
+  border: solid white 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center d;
+}
+
+.our-regions-sections {
+  text-align: center;
+  padding-top: 25rem;
+  position: relative;
+}
+
+.our-regions-underline {
+  position: relative;
+  display: inline-block;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 110px;
+  font-weight: bold;
+  padding-top: 5rem;
+  padding-bottom: 20px !important;
+  padding-left: 15rem;
+  padding-right: 10px;
+}
+
+.our-regions-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+
+.our-regions-underline:not(.line-animation)::after {
+  transition: width 1s ease; /* The transition duration when the animation is out of view */
+  width: 0;
+}
+
+.city-underline {
+  position: relative;
+  display: inline-block;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 110px;
+  font-weight: bold;
+  padding-top: 5rem;
+  padding-bottom: 20px !important;
+  padding-right: 30rem;
+  padding-left: 10px;
+}
+
+.city-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 1s ease;
+}
+
+.city-underline:not(.line-animation)::after {
+  transition: width 1s ease; /* The transition duration when the animation is out of view */
+  width: 0;
+}
+
+.line-animation::after {
+  transition: width 3s ease;
+  width: 100% !important;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.icon-left {
+  animation: moveUp 2s ease-in-out infinite;
+  position: absolute;
+  left: 0;
+  margin-left: 5rem;
+  font-size: 50px !important;
+  color: black;
+}
+
+.our-regions-sections h1 {
+  padding-bottom: 5rem;
+}
+
+.content-section {
+  background-color: white;
+  position: relative;
+  top: -50px; /* Adjust this value based on the amount of overlap you want */
+  left: 60px;
+  margin: 0 auto;
+  width: 60% !important; /* Adjust width to your preference */
+  padding: 20px; /* Add padding to create some space around the content */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a "lifting" effect */
+}
+
+.img-cont {
+  width: 500px !important;
+}
+
+.first-section-pic {
+  width: 60% !important;
+}
+
+.second-section-pic {
+  width: 30% !important;
+}
+
+.third-section-pic {
+  width: 50% !important;
+}
+
+.icon-right {
+  animation: moveUp 2s ease-in-out infinite;
+  position: absolute;
+  right: 0;
+  margin-right: 3rem;
+  font-size: 50px !important;
+}
+
+/* MACBOOK DISPLAY */
+@media screen and (min-width: 1280px) and (min-height: 800px) and (-webkit-min-device-pixel-ratio: 2) and (max-resolution: 227dpi) {
+  .our-regions {
+    position: absolute;
+    bottom: -20rem;
+    width: 100%;
+  }
+
+  .our-regions-coverphoto {
+    height: 600px !important;
+  }
+
+  .our-regions-content img {
+    max-width: 100%;
+    height: auto;
+    border: solid white 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .our-regions-sections {
+    text-align: center;
+    padding-top: 25rem;
+  }
+
+  .our-regions-sections h1 {
+    padding-bottom: 5rem;
+  }
+
+  .content-section {
+    background-color: white;
+    position: relative;
+    top: -50px; /* Adjust this value based on the amount of overlap you want */
+    left: 60px;
+    margin: 0 auto;
+    width: 70%; /* Adjust width to your preference */
+    padding: 20px; /* Add padding to create some space around the content */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a "lifting" effect */
+  }
+
+  .first-section-pic {
+    width: 60%;
+  }
+
+  .second-section-pic {
+    width: 30%;
+  }
+
+  .third-section-pic {
+    width: 60%;
+  }
+}
+
+/* PHONE DISPLAY */
+@media screen and (max-width: 600px) {
+  .our-regions {
+    position: absolute;
+    bottom: -40rem;
+    width: 100%;
+  }
+
+  .things-to-do {
+    font-size: 60px;
+  }
+
+  .our-regions-coverphoto {
+    height: 600px !important;
+  }
+
+  .our-regions-content img {
+    max-width: 100%;
+    height: auto;
+    border: solid white 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center d;
+  }
+
+  .our-regions-sections {
+    text-align: center;
+    padding-top: 43rem;
+  }
+
+  .our-regions-underline {
+    position: relative;
+    display: inline-block;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 15px !important;
+    padding-left: 0rem;
+    padding-right: 10px;
+  }
+
+  .our-regions-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease;
+  }
+
+  .our-regions-underline:not(.line-animation)::after {
+    transition: width 1s ease; /* The transition duration when the animation is out of view */
+    width: 0;
+  }
+
+  .city-underline {
+    position: relative;
+    display: inline-block;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 15px !important;
+    padding-right: 0rem;
+    padding-left: 10px;
+  }
+
+  .city-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease;
+  }
+
+  .city-underline:not(.line-animation)::after {
+    transition: width 1s ease; /* The transition duration when the animation is out of view */
+    width: 0;
+  }
+
+  .line-animation::after {
+    transition: width 1s ease;
+    width: 100% !important;
+  }
+
+  .icon-left {
+    animation: moveUp 2s ease-in-out infinite;
+    position: absolute;
+    left: 1;
+    margin-left: 0rem;
+    font-size: 50px !important;
+  }
+
+  .icon-right {
+    animation: moveUp 2s ease-in-out infinite;
+    position: absolute;
+    right: 0 !important;
+    margin-right: 0rem;
+    font-size: 50px !important;
+  }
+
+  .our-regions-sections h1 {
+    padding-bottom: 5rem;
+  }
+
+  .content-section {
+    background-color: white;
+    position: relative;
+    top: -50px; /* Adjust this value based on the amount of overlap you want */
+    left: 60px;
+    margin: 0 auto;
+    width: 60% !important; /* Adjust width to your preference */
+    padding: 20px; /* Add padding to create some space around the content */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for a "lifting" effect */
+  }
+
+  .img-cont {
+    width: 300px !important;
+  }
+
+  .first-section-pic {
+    width: 60%;
+  }
+
+  .second-section-pic {
+    width: 60%;
+  }
+
+  .third-section-pic {
+    width: 60%;
+  }
+}

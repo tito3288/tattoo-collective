@@ -1,0 +1,150 @@
+.about-row {
+  width: 100%;
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+
+.about-borders {
+  border-top: solid black 2px;
+  border-bottom: solid black 2px;
+  width: 90%;
+  margin: auto auto;
+}
+
+.about-span {
+  font-size: 65px;
+  font-weight: bold;
+}
+
+.about-row h1 {
+  font-family: "Saira Condensed", sans-serif;
+  /* font-weight: bold; */
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  font-size: 50px;
+}
+
+.about-row p {
+  font-family: "Comme", sans-serif;
+  font-size: 23px;
+  padding-top: 8rem;
+}
+
+.about-shadow {
+  box-shadow: 1rem 1rem #2b2730, -1rem -1rem #e4c988;
+}
+
+.about-underline {
+  position: relative;
+  display: inline-block;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 120px;
+  font-weight: bold;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+  padding-left: 15rem;
+}
+
+.about-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.5s ease;
+}
+
+.about-underline:not(.line-animation)::after {
+  transition: width 1s ease; /* The transition duration when the animation is out of view */
+  width: 0;
+}
+
+.line-animation::after {
+  transition: width 1s ease;
+  width: 100%;
+}
+
+/* MACBOOK DISPLAY */
+@media screen and (min-width: 1280px) and (min-height: 800px) and (-webkit-min-device-pixel-ratio: 2) and (max-resolution: 227dpi) {
+  .about-row {
+    width: 100%;
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+    text-align: center;
+  }
+}
+
+/* PHONR DISPLAY */
+@media screen and (max-width: 600px) {
+  .about-row {
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+  }
+
+  .about-shadow {
+    box-shadow: 1rem 1rem #2b2730, -1rem -1rem #e4c988;
+  }
+
+  .about-borders {
+    border-top: solid black 2px;
+    border-bottom: solid black 2px;
+    width: 90%;
+    margin: auto auto;
+  }
+
+  .about-span {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .about-row h1 {
+    font-family: "Saira Condensed", sans-serif;
+    /* font-weight: bold; */
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    font-size: 30px;
+  }
+
+  .about-row p {
+    font-family: "Comme", sans-serif;
+    font-size: 20px;
+    padding-top: 5rem;
+  }
+
+  .about-underline {
+    position: relative;
+    display: inline-block;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 75px;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    padding-left: 6rem;
+  }
+
+  .about-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease;
+  }
+
+  .about-underline:not(.line-animation)::after {
+    transition: width 1s ease; /* The transition duration when the animation is out of view */
+    width: 0;
+  }
+
+  .line-animation::after {
+    transition: width 1s ease;
+    width: 100%;
+  }
+}
